@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+    q2a:
+      build:
+        context: ./
+        dockerfile: Dockerfile
+      restart: always
+
+    mysql:
+      image: mysql:5
+      restart: always
+      environment:
+        MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+        MYSQL_DATABASE: 'Q2A'
+        MYSQL_USER: 'q2a-root'
+        MYSQL_PASSWORD: '${Q2A_MYSQL_PASSWORD}'
