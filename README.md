@@ -3,7 +3,7 @@ Question to answer is a stack overflow like website for self hosting.
 For more details See: https://github.com/q2a/question2answer 
 
 ## This repo
-This is an attempt to made a docker q2a instance with some already installed plugins
+This is an attempt to made a docker q2a instance with some already installed plugins  
 Plugins are:
 - [qa-filter](https://github.com/ganbox/qa-filter.git)
 - [qa-poll](https://github.com/NoahY/q2a-poll.git)
