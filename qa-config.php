@@ -34,9 +34,9 @@
 	define('QA_MYSQL_PORT', '3306');
 */
 
-	define('QA_MYSQL_HOSTNAME', mysql');
-	define('QA_MYSQL_USERNAME', 'q2a-root');
-	define('QA_MYSQL_PASSWORD', '{{ Q2A_MYSQL_PASSWORD }}');
+	define('QA_MYSQL_HOSTNAME', 'mysql');
+	define('QA_MYSQL_USERNAME', '{{ .Q2A_MYSQL_USER }}');
+	define('QA_MYSQL_PASSWORD', '{{ .Q2A_MYSQL_PASSWORD }}');
 	define('QA_MYSQL_DATABASE', 'q2a');
 
 /*

@@ -5,12 +5,19 @@ services:
       build:
         context: ./
         dockerfile: Dockerfile
+      ports:
+        - 80:80
+        - 9000:9000
+      environment:
+        Q2A_MYSQL_USER: "${Q2A_MYSQL_USER}"
+        Q2A_MYSQL_PASSWORD: "${Q2A_MYSQL_PASSWORD}"
       restart: always
 
     mysql:
       image: mysql:5
       restart: always
       environment:
-        MYSQL_DATABASE: 'Q2A'
-        MYSQL_USER: 'q2a-root'
-        MYSQL_PASSWORD: '${Q2A_MYSQL_PASSWORD}'
+        MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+        MYSQL_DATABASE: 'q2a'
+        MYSQL_USER: "${Q2A_MYSQL_USER}"
+        MYSQL_PASSWORD: "${Q2A_MYSQL_PASSWORD}"
